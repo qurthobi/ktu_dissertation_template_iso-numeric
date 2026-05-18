@@ -1,7 +1,0 @@
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-% \Needspace{4\baselineskip}
-\subsection*{Literatūros apžvalgos apie giluminio neuroninio tinklo metodą akustinių anomalijų įvykiams aptikti}\label{chap:onelt}
-% \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-Akustinių metodų naudojimas aplinkos stebėjimo ar pažeidimų nustatymo kontekste turi reikšmingą istorinį precedentą~\cite{Simonovic2021, Vicuna2017}. Paprastai neįprastos sąlygos stebimose įrangose gali būti nustatytos pagal pagamintų akustinių signalų savybių kitimą, pavyzdžiui, dažnio ir amplitudės pokyčius.~\cite{Holford2017, Cooper2020}. Akustinio metodo pranašumas, palyginti su kitais metodais, yra tai, kad \dots
-
-\dots
