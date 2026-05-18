@@ -1,0 +1,147 @@
+\subsection*{Duomenų rinkiniai ir metodologija}\label{chap:twolt}
+% \DeclareCaptionLabelFormat{rev}{#2~#1}
+% \renewcommand{\figurename}{paveikslas}
+% \renewcommand{\tablename}{lentelė}
+% \renewcommand{\listfigurename}{Paveikslų sąrašas}
+% \renewcommand{\listtablename}{Lentelių sąrašas}%
+% \captionsetup[figure]{labelformat=ltrev}
+% \captionsetup[table]{labelformat=ltrev}
+\subsection*{Duomenų minkiniai}
+% \glsreset{mimii}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsubsection*{MIMII}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
+% \glsreset{mimii}
+\begin{table}[!ht]
+	\centering
+	% \footnotesize
+	\caption[Garso failų pasiskirstymas MIMII duomenų rinkinyje]{Garso failų pasiskirstymas \gls{mimii} duomenų rinkinyje~\cite{Purohit2019}}
+	% \captionsetup{labelformat=rev}
+	\label{tab:mimii_datasetslt}
+	\renewcommand{\arraystretch}{1.2}
+	\small
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		\multirow{2}{*}{\textbf{Įrenginys}} & \multirow{2}{*}{\textbf{ID}} & \multicolumn{2}{c|}{\textbf{Sąlyga}}&\multirow{2}{*}{\textbf{Įrenginys}} & \multirow{2}{*}{\textbf{ID}} & \multicolumn{2}{c|}{\textbf{Sąlyga}}\\
+		\cline{3-4}
+		\cline{7-8}
+		&&\textbf{Normal} & \textbf{Abnormal}&&&\textbf{Normal} & \textbf{Abnormal}\\
+		\hline
+		\multirow{4}{*}{Fan} & id\_00 & 1011 & 407&\multirow{4}{*}{Slider} & id\_00 & 1068 & 356\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_02 & 1016& 359&& id\_02 & 1068 & 267\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_04 & 1033 & 348&& id\_04 & 534 & 178\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_06 & 1015 &361&& id\_06 & 534 & 89\\
+		\hline
+		\multirow{4}{*}{Pump} & id\_00 & 1006 & 143&\multirow{4}{*}{Valve} & id\_00 & 991 & 119\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_02 & 1005 & 111&& id\_02 & 708 & 120\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_04 & 702 & 100&& id\_04 & 1000 & 120\\
+		\cline{2-4}
+		\cline{6-8}
+		& id\_06 & 1036 & 102&& id\_06 & 992 & 120\\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[!ht]
+	\centering
+	\caption[Bendrosios MIMII duomenų rinkinio savybės]{Bendrosios \gls{mimii} duomenų rinkinio savybės~\cite{Purohit2019}}
+	\label{tab:mimii_propertiesslt}
+	\small
+	\begin{tabular}{ll}
+		\hline
+		\multicolumn{1}{c}{\textbf{Nuosavybė}} & \multicolumn{1}{c}{\textbf{Value}} \\
+		\hline
+		Bendras failų skaičius & $\sim$55,000+ \\
+		Failo trukmė & 10 sekundės \\
+		Mėginių ėmimo dažnis & 16 kHz \\
+		Kanalai & Stereo \\
+		Bitų gylis & 16-bit \\
+		Failo formatas & WAV \\
+		Klasės & 2 (tik operacijos)\\
+		& 8 (2 (operacijos) $\times$ 4 (mašinos))\\
+		& 32 (2 (operacijos) $\times$ 4 (mašinos) $\times$ 4 (identifikatoriai))\\
+		Failai pagal klasę & Skiriasi\\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/fan/normal/00000000.png}
+		\caption{normal fan}
+		\label{fig:fan_normalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/fan/abnormal/00000000.png}
+		\caption{abnormal fan}
+		\label{fig:fan_abnormalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/pump/normal/00000000.png}
+		\caption{normal pump}
+		\label{fig:pump_normalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/pump/abnormal/00000000.png}
+		\caption{abnormal pump}
+		\label{fig:pump_abnormalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/slider/normal/00000000.png}
+		\caption{normal slider}
+		\label{fig:slider_normalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/slider/abnormal/00000000.png}
+		\caption{abnormal slider}
+		\label{fig:slider_abnormalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/valve/normal/00000000.png}
+		\caption{normal valve}
+		\label{fig:valve_normalslt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.22\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/waveform/mimii/valve/abnormal/00000000.png}
+		\caption{abnormal valve}
+		\label{fig:valve_abnormalslt}
+	\end{subfigure}
+	\caption{Normalizuokite įvairių garso įrašų bangų formas MIMII duomenų rinkinyje}
+	\label{fig:valve_mimiislt}
+\end{figure}
+
+\gls{mimii} duomenų rinkinys apima akustinius duomenis, skirtus pramoninių mašinų būklės stebėjimo tyrimams remti. Šį rinkinį 2019 m. sudarė ir išleido Purohit ir kt. iš Hitachi Ltd \gls{rnd} grupės. Jame įrašyti tipiškų gamyklos mašinų garsai \dots
+% \glsreset{esc50}
+\subsubsection*{ESC50}
+\dots
+
+\subsubsection*{FSC22}
+\dots
+\subsection*{Funkcijų ekstraktoriai}
+\dots
+\subsection*{Siūlomi modeliai}
+\dots
