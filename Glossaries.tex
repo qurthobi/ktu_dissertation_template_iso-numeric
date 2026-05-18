@@ -1,0 +1,49 @@
+% =========================
+% Acronyms
+% =========================
+
+\newacronym{aad}{AAD}{acoustic anomaly detection}
+\newacronym{ai}{AI}{artificial intelligence}
+\newacronym{cnn}{CNN}{convolutional neural network}
+\newacronym{dl}{DL}{deep learning}
+\newacronym{dnn}{DNN}{deep neural network}
+\newacronym{dtl}{DTL}{deep transfer learning}
+\newacronym{eg}{e.g.}{\textit{exempli gratia}}
+\newacronym{emd}{EMD}{empirical mode decomposition}
+\newacronym{esc}{ESC}{environmental sound classification}
+\newacronym{etal}{et al.}{\textit{et alia}}
+\newacronym{etc}{etc.}{\textit{et cetera}}
+\newacronym{fft}{FFT}{fast Fourier transform}
+\newacronym{ie}{i.e.}{\textit{id est}}
+\newacronym{mlr}{MLR}{methodological literature review}
+\newacronym{nlr}{NLR}{narrative literature review}
+\newacronym{rnd}{R\&D}{research and development}
+\newacronym{slr}{SLR}{systematic literature review}
+\newacronym{snr}{SNR}{signal-to-noise ratio}
+\newacronym{sota}{SOTA}{state of the art}
+\newacronym{tlr}{TLR}{traditional literature review}
+
+% =========================
+% Terms / concepts / datasets / models
+% =========================
+
+\newglossaryentry{chromastft}{name={chroma-STFT}, description={a common lossy audio feature that compresses the full frequency spectrum of a signal into 12 bins, each corresponding to one of the twelve pitch classes of the Western scale. The acronym stands for "chroma short term Fourier transform"}}
+\newglossaryentry{esc50}{name={ESC-50}, description={a dataset of 2,000 environmental audio clips across 50 categories, created as a standard benchmark for environmental sound classification methods}}
+\newglossaryentry{fsc22}{name={FSC22}, description={a public benchmark dataset for detecting and classifying forest audio, particularly sounds linked to illegal activities like poaching and logging. "FSC" stands for "Forest Sound Classification," and "22" indicates the year of creation}}
+\newglossaryentry{melspectrogram}{name={mel-spectrogram}, description={a time–frequency representation of audio that replaces the linear Hertz scale with the non-linear mel scale, reflecting human pitch perception}}
+\newglossaryentry{mfcc}{name={MFCC}, description={a set of characteristics that represent the short-term power spectrum of a sound, based on the ear’s non-linear, logarithmic way of perceiving frequency. MFCC stands for "Mel-Frequency Cepstral Coefficients"}}
+\newglossaryentry{mimii}{name={MIMII}, description={a publicly available collection of industrial machine audio created for unsupervised detection of abnormal sounds. its name is an acronym for "Malfunctioning Industrial Machine Investigation and Inspection"}}
+\newglossaryentry{stft}{name={STFT}, description={an abbreviation of "Short-Time Fourier Transform," a mathematical method for analyzing how the frequency and phase content of short segments of a signal vary over time}}
+
+% =========================
+% Symbols
+% =========================
+
+\newglossaryentry{disctime}{name={$n$}, description={discrete-time frame index}, type=symbolslist, sort=n, first={discrete-time frame index ($n$)}}%
+\newglossaryentry{fftsize}{name={$N$}, description={fast Fourier transform size}, type=symbolslist, sort=nfftsize, first={\gls{fft} size ($N$)}}%
+\newglossaryentry{frequency}{name={$f$}, description={frequency bin}, type=symbolslist, sort=f, first={frequency bin ($f$)}}%
+\newglossaryentry{hoplen}{name={$H$}, description={hop length}, type=symbolslist, sort=hoplen, first={hop length ($H$)}}%
+\newglossaryentry{inputsignal}{name={$x[n]$}, description={discrete-time input signal}, type=symbolslist, sort=xn, first={discrete-time input signal ($x[n]$)}}%
+\newglossaryentry{slidwinfunc}{name={$\omega[n - tH]$}, description={sliding-window function}, type=symbolslist, sort=omegah, first=sliding-window function ($\omega[n - tH]$)}%
+\newglossaryentry{spectrogram}{name={$X[t, f]$}, description={spectrogram}, type=symbolslist, sort=xtf, first={spectrogram ($X[t, f]$)}}%
+\newglossaryentry{time}{name={$t$}, description={time}, type=symbolslist, sort=time}%
