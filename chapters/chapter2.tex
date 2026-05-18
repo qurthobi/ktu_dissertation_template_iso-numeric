@@ -1,0 +1,26 @@
+\section{\MakeUppercase{Datasets and Methodologies}} \label{chap:two}
+This chapter presents the materials and methods used to develop and evaluate the proposed framework for audio classification and anomaly detection. Section~\ref{sec:datasets} describes the datasets used in this study, emphasizing their acoustic characteristics and relevance to industrial, urban, and natural environments. Section~\ref{sec:feature_extractors} introduces \dots
+\subsection{Datasets}\label{sec:datasets}
+To thoroughly evaluate audio classification systems, it is essential to test them across various acoustic environments. Thus, three well-known and publicly accessible datasets (\gls{ie}, \gls{esc50}, \gls{mimii}, and \gls{fsc22}) were chosen, each representing \dots
+\glsreset{mimii}
+
+\subsection{Feature Extractors}\label{sec:feature_extractors}
+To ensure strong and precise audio classification, a collection of commonly used and perceptually inspired feature extraction techniques was employed. In particular, \gls{melspectrogram}, \gls{mfcc}, and \gls{chromastft} representations were calculated for \dots
+
+\dots
+\glsreset{melspectrogram}
+\subsubsection{Melspectrogram}
+\dots
+
+\begin{equation}
+	X[t, f] = \sum_{n=0}^{N-1} x[n] \, \omega[n - tH] \, \exp\left(-j 2\pi \frac{f n}{N}\right) \label{eq:stftmel}
+\end{equation}
+
+Equation~(\ref{eq:stftmel}) computes the \gls{stft} of the \gls{inputsignal} by applying a \gls{slidwinfunc} to successive, overlapping frames of the signal. This segmentation is determined by parameters such as \gls{time}, \gls{frequency}, \gls{disctime}, \gls{fftsize}, and \gls{hoplen}. Each windowed segment is subsequently transformed into the frequency domain via a complex exponential kernel, yielding a time–frequency representation in the form of a \gls{spectrogram}. Each element of this complex-valued matrix encodes the spectral content corresponding to a specific \gls{frequency} and \gls{time} frame, thereby capturing the localized frequency structure of the signal over time.
+
+\begin{equation}
+	S_{\mathrm{P}}[t, f] = \left| X[t, f] \right|^2
+	\label{eq:powerspec}
+\end{equation}
+
+\dots
