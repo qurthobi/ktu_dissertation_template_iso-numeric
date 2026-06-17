@@ -1,7 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ktu_dissertation_style}[2026/04/21 v2.0 KTU thesis style]
 
-% -------------------- Core packages & fonts --------------------
+% ====================================================
+% Packages
+% ====================================================
+
+\RequirePackage[paperwidth=170mm, paperheight=240mm, left=20mm, right=18mm, top=18mm, bottom=18mm]{geometry}
+
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{mathptmx}
@@ -9,9 +14,7 @@
 \RequirePackage{csquotes}
 \RequirePackage{textcomp}
 \RequirePackage{xcolor}
-\definecolor{darkgreen}{RGB}{0,100,0}
 
-% -------------------- Page geometry --------------------
 \RequirePackage[
   paperwidth=170mm,
   paperheight=240mm,
@@ -21,8 +24,65 @@
   bottom=18mm
 ]{geometry}
 
-% -------------------- Page style --------------------
 \RequirePackage{fancyhdr}
+\RequirePackage[none]{hyphenat}
+\RequirePackage{ragged2e}
+\RequirePackage{setspace}
+\RequirePackage{indentfirst}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+
+\RequirePackage[
+  font={stretch=1.15},
+  tableposition=top,
+  figureposition=bottom,
+  labelfont=bf
+]{caption}
+
+\RequirePackage{chngcntr}
+\RequirePackage{hyperref}
+\RequirePackage{amsmath}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{lscape}
+\RequirePackage{array}
+\RequirePackage{float}
+\RequirePackage{multirow}
+\RequirePackage{multicol}
+\RequirePackage{subcaption}
+\RequirePackage{lastpage}
+\RequirePackage{etoolbox}
+\RequirePackage{soul}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{needspace}
+\RequirePackage{wasysym}
+\RequirePackage{mfirstuc}
+\RequirePackage{tocloft}
+
+\RequirePackage[
+  backend=biber,
+  bibstyle=iso-numeric,
+  citestyle=numeric-comp,
+  sorting=none,
+  giveninits=true,
+  doi=true,
+  url=true,
+  isbn=true
+]{biblatex}
+
+\usepackage[acronym,nonumberlist]{glossaries}
+
+% ====================================================
+% Configuration
+% ====================================================
+
+% -------------------- Core packages & fonts --------------------
+\definecolor{darkgreen}{RGB}{0,100,0}
+
+% -------------------- Page style --------------------
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[RO,LE]{\thepage}
@@ -36,17 +96,12 @@
 }
 
 % -------------------- Text flow & spacing --------------------
-\RequirePackage[none]{hyphenat}
-\RequirePackage{ragged2e}
-\RequirePackage{setspace}
 \singlespacing
 \emergencystretch=3.5em
 \setlength{\parindent}{0.9cm}
 \setlength{\parskip}{0pt}
-\RequirePackage{indentfirst}
 
 % -------------------- Sectioning --------------------
-\RequirePackage{titlesec}
 \titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
 \titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
 
@@ -62,69 +117,28 @@
 \newcommand\sectionbreak{\clearpage}
 
 % -------------------- Lists --------------------
-\RequirePackage{enumitem}
 \setlist[enumerate]{itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*}
 \setlist[description]{itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0pt}
 \setlist[itemize]{itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0pt}
 
 % -------------------- Captions & counters --------------------
-\RequirePackage[
-  font={stretch=1.15},
-  tableposition=top,
-  figureposition=bottom,
-  labelfont=bf
-]{caption}
 \captionsetup[table]{format=hang, justification=justified, singlelinecheck=false}
 \captionsetup[figure]{justification=centering, singlelinecheck=false}
 
-\RequirePackage{chngcntr}
 % Keep figure/table numbering global to match current main.tex behavior.
 \counterwithout{table}{section}
 \counterwithout{figure}{section}
 \counterwithin{equation}{section}
 
 % -------------------- Hyperlinks --------------------
-\RequirePackage{hyperref}
 \hypersetup{colorlinks=false}
 
-% -------------------- Math, plots & graphics --------------------
-\RequirePackage{amsmath}
-\RequirePackage{tikz}
-\RequirePackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usetikzlibrary{decorations.pathreplacing,positioning,arrows.meta,fit,backgrounds,calc}
-\tikzset{
-  >=Latex,
-  layer/.style={draw, rounded corners=2pt, thick, align=center, fill=gray!5, inner sep=6pt},
-  note/.style={draw, rounded corners=2pt, align=left, fill=yellow!10, inner sep=4pt},
-  shapeLbl/.style={font=\small\ttfamily, align=center, text=black!80},
-  tinyLbl/.style={font=\scriptsize\ttfamily, text=black!70},
-  pipe/.style={-Latex, thick},
-}
-
 % -------------------- Tables & floats --------------------
-\RequirePackage{booktabs}
-\RequirePackage{tabularx}
-\RequirePackage{longtable}
-\RequirePackage{lscape}
-\RequirePackage{array}
-\RequirePackage{float}
-\RequirePackage{multirow}
-\RequirePackage{multicol}
-\RequirePackage{subcaption}
 \newcolumntype{R}{>{\raggedright\arraybackslash}p{\linewidth}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{L}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
-% -------------------- Other utilities --------------------
-\RequirePackage{lastpage}
-\RequirePackage{etoolbox}
-\RequirePackage{soul}
-\RequirePackage[normalem]{ulem}
-\RequirePackage{needspace}
-\RequirePackage{wasysym}
 % -------------------- Title capitalization --------------------
-\RequirePackage{mfirstuc}
 \MFUnocap{the}
 \MFUnocap{and}
 
@@ -136,7 +150,6 @@
 \makeatother
 
 % -------------------- TOC, LoF & LoT formatting --------------------
-\RequirePackage{tocloft}
 
 % TOC structure
 \setlength{\cftsecindent}{0pt}
@@ -241,6 +254,21 @@
     \item[\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}}] -- \glossentrydesc{##1}.%
   }%
 }
+
+% -------------------- Bibliography formatting --------------------
+\renewcommand*{\multinamedelim}{\addcomma\space}
+\renewcommand*{\finalnamedelim}{\addcomma\addspace and\space}
+
+% -------------------- Glossaries --------------------
+\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols}
+
+\setglossarystyle{list}
+\renewcommand{\glsgroupskip}{}
+
+\renewcommand*{\glossentry}[2]{%
+  \item[\glsentryitem{#1}\glstarget{#1}{\glossentryname{#1}}] -- \glossentrydesc{#1}.%
+}
+\makeglossaries
 
 % -------------------- End of package --------------------
 \endinput
