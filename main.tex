@@ -1,36 +1,11 @@
 \documentclass[twoside, 11pt]{article}
-\usepackage[paperwidth=170mm, paperheight=240mm, left=20mm, right=18mm, top=18mm, bottom=18mm]{geometry}
 \usepackage{ktu_dissertation_style}
-\usepackage[
-  backend=biber,
-  bibstyle=iso-numeric,
-  citestyle=numeric-comp,
-  sorting=none,
-  giveninits=true,
-  doi=true,
-  url=true,
-  isbn=true
-]{biblatex}
-\renewcommand*{\multinamedelim}{\addcomma\space}
-\renewcommand*{\finalnamedelim}{\addcomma\addspace and\space}
 \addbibresource{references.bib}
 \AtBeginBibliography{\fontsize{10pt}{12pt}\selectfont}
-
-\usepackage[acronym,nonumberlist]{glossaries}
-\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols}
-
-\setglossarystyle{list}
-\renewcommand{\glsgroupskip}{}
-
-\renewcommand*{\glossentry}[2]{%
-  \item[\glsentryitem{#1}\glstarget{#1}{\glossentryname{#1}}] -- \glossentrydesc{#1}.%
-}
-\makeglossaries
 \begin{document}
 \selectlanguage{english}
 \input{Glossaries}
 \clearpage
-% \input{TitlePageRev}
 \input{TitlePageEN}
 \clearpage
 \input{TitlePageLT}
@@ -114,8 +89,4 @@
 \input{Acknowledgement}
 \clearpage %<-- Please insert the comment marker if the total count of your pages, excluding the metrics section, is an odd number.
 \input{Metrics}
-% \input{PageSummaryEN}
-% \clearpage
-% \input{PageSummaryLT}
-\label{LastPage}
 \end{document}
