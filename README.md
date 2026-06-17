@@ -302,4 +302,4 @@ GitHub: https://github.com/qurthobi
 
 # Acknowledgements
 
-Inspired by several open-source academic LaTeX templates and dissertation projects.
+This was inspired by several open-source LaTeX templates and dissertation projects. Special thanks go to https://dominyk4s.github.io/KTU-LaTeX/ for providing the main inspiration.
